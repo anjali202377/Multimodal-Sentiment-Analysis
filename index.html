@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimodal Sentiment Analysis Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="assets.png" alt="Logo" class="logo">
+      <h1>Multimodal Sentiment Analysis Dashboard</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="video-section">
+      <h2>Facial Emotion Detection</h2>
+      <video id="videoFeed" autoplay playsinline></video>
+      <div id="emotionDisplay">Detected Emotion: <span id="detectedEmotion">Loading...</span></div>
+      <button id="captureEmotion">Capture Emotion</button>
+    </section>
+    
+    <section class="audio-section">
+      <h2>Audio Emotion Detection</h2>
+      <input type="file" id="uploadAudio" accept="audio/*">
+      <button id="analyzeAudio">Analyze Audio</button>
+      <p id="audioResult">Audio Emotion: <span id="audioEmotion">None</span></p>
+    </section>
+
+    <section class="text-sentiment-section">
+      <h2>Text Sentiment Analysis</h2>
+      <textarea id="textInput" rows="4" cols="50" placeholder="Enter your text here..."></textarea>
+      <button id="analyzeText">Analyze Sentiment</button>
+      <p id="textResult">Detected Sentiment: <span id="textSentiment">None</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Emotion Detection System. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
